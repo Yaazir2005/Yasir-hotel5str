@@ -1,0 +1,477 @@
+:root{
+--ink:#151412;
+--cream:#f4f0e8;
+--paper:#fbfaf7;
+--gold:#b9985a;
+--line:#d9d2c6;
+--muted:#777168
+}
+
+*{
+box-sizing:border-box
+}
+
+html{
+scroll-behavior:smooth
+}
+
+body{
+margin:0;
+background:var(--paper);
+color:var(--ink);
+font-family:"DM Sans",sans-serif
+}
+
+a{
+text-decoration:none;
+color:inherit
+}
+
+.nav{
+height:78px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 5%;
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:10;
+color:#fff;
+background:linear-gradient(#111,transparent)
+}
+
+.logo{
+font-family:"Playfair Display";
+font-weight:700;
+letter-spacing:2px;
+font-size:19px
+}
+
+.logo span{
+font-weight:400;
+color:#d5b879
+}
+
+.nav nav{
+display:flex;
+gap:32px;
+font-size:13px
+}
+
+.nav nav a{
+opacity:.9
+}
+
+.nav-book{
+border:1px solid #d8c18d;
+padding:11px 18px;
+font-size:12px
+}
+
+.menu{
+display:none;
+background:none;
+border:0;
+color:white;
+font-size:22px
+}
+
+.hero{
+height:100vh;
+min-height:650px;
+position:relative;
+background:url("https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=2000&q=90") center/cover;
+display:flex;
+align-items:center;
+color:white
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.1))
+}
+
+.hero-content{
+position:relative;
+margin-left:10%;
+max-width:680px
+}
+
+.eyebrow,
+.section-label{
+font-size:11px;
+letter-spacing:3px;
+color:var(--gold);
+font-weight:600
+}
+
+.hero h1{
+font:600 clamp(55px,7vw,96px)/.93 "Playfair Display";
+margin:22px 0
+}
+
+.hero h1 i,
+h2 i{
+font-weight:500;
+color:#d2b77b
+}
+
+.hero-text{
+max-width:490px;
+line-height:1.8;
+color:#ddd;
+margin-bottom:34px
+}
+
+.gold-btn{
+display:inline-flex;
+gap:28px;
+align-items:center;
+background:var(--gold);
+color:#fff;
+border:0;
+padding:16px 22px;
+font-weight:600;
+font-size:12px;
+letter-spacing:.5px;
+cursor:pointer
+}
+
+.gold-btn span{
+font-size:18px
+}
+
+.scroll{
+position:absolute;
+bottom:28px;
+left:10%;
+font-size:9px;
+letter-spacing:2px;
+color:#ddd
+}
+
+.intro,
+.rooms,
+.booking,
+.contact{
+padding:120px 10%
+}
+
+.intro{
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:80px
+}
+
+.intro h2,
+.rooms h2,
+.booking h2,
+.contact h2{
+font:600 50px/1.05 "Playfair Display";
+margin:0 0 22px
+}
+
+.intro p,
+.section-head p,
+.booking>p,
+.contact>div>p{
+max-width:580px;
+color:var(--muted);
+line-height:1.9
+}
+
+.text-link{
+display:inline-block;
+margin-top:16px;
+color:var(--gold);
+font-size:13px;
+border-bottom:1px solid var(--gold);
+padding-bottom:5px
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+margin:15px 0 40px
+}
+
+.section-head p{
+margin:0;
+max-width:360px
+}
+
+.room-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px
+}
+
+.room-card{
+background:#fff
+}
+
+.room-img{
+height:350px;
+background-size:cover;
+background-position:center
+}
+
+.room-info{
+padding:24px
+}
+
+.room-info h3{
+font:600 26px "Playfair Display";
+margin:0 0 7px
+}
+
+.room-info p{
+color:var(--muted);
+font-size:13px;
+line-height:1.7
+}
+
+.room-meta{
+display:flex;
+justify-content:space-between;
+border-top:1px solid var(--line);
+padding-top:17px;
+margin-top:20px;
+font-size:12px
+}
+
+.price{
+color:var(--gold);
+font-weight:600
+}
+
+.experience{
+background:var(--ink);
+color:#fff;
+display:grid;
+grid-template-columns:1fr 1fr;
+min-height:700px
+}
+
+.experience-copy{
+padding:110px 12%
+}
+
+.experience h2{
+font:600 55px/1.05 "Playfair Display";
+margin:20px 0
+}
+
+.experience-copy>p{
+color:#b9b4aa;
+line-height:1.9;
+max-width:470px
+}
+
+.experience-image{
+background:url("https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1400&q=85") center/cover
+}
+
+.features{
+margin-top:60px;
+border-top:1px solid #444
+}
+
+.features div{
+display:flex;
+gap:35px;
+padding:18px 0;
+border-bottom:1px solid #444;
+font-size:14px
+}
+
+.features b{
+color:var(--gold);
+font-weight:400
+}
+
+.booking{
+background:#eee8dd
+}
+
+.booking>p{
+margin-bottom:45px
+}
+
+.form{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+max-width:850px
+}
+
+.form label{
+display:block;
+font-size:11px;
+letter-spacing:1px;
+margin-bottom:8px
+}
+
+.form input,
+.form select,
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:15px;
+border:1px solid #ccc;
+background:#faf9f6;
+font:inherit;
+outline:none
+}
+
+.form input:focus,
+.form select:focus,
+.contact-form input:focus,
+.contact-form textarea:focus{
+border-color:var(--gold)
+}
+
+.form button{
+justify-self:start
+}
+
+.message{
+font-size:13px;
+margin-top:15px;
+color:#806a38
+}
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:100px
+}
+
+.contact-line{
+line-height:2;
+color:#555!important
+}
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:15px
+}
+
+.contact-form textarea{
+height:140px;
+resize:vertical
+}
+
+.outline-btn{
+padding:15px 20px;
+background:transparent;
+border:1px solid var(--ink);
+cursor:pointer;
+align-self:flex-start
+}
+
+.outline-btn:hover{
+background:var(--ink);
+color:white
+}
+
+footer{
+background:#111;
+color:#bbb;
+padding:45px 10%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+font-size:11px
+}
+
+footer a{
+color:#d1b372
+}
+
+.nav-book:hover,
+.gold-btn:hover{
+filter:brightness(1.08)
+}
+
+@media(max-width:800px){
+
+.nav{
+height:65px
+}
+
+.nav nav,
+.nav-book{
+display:none
+}
+
+.menu{
+display:block
+}
+
+.intro,
+.contact,
+.experience{
+grid-template-columns:1fr
+}
+
+.intro,
+.rooms,
+.booking,
+.contact{
+padding:80px 7%
+}
+
+.intro{
+gap:35px
+}
+
+.section-head{
+display:block
+}
+
+.room-grid{
+grid-template-columns:1fr
+}
+
+.room-img{
+height:300px
+}
+
+.experience-copy{
+padding:80px 7%
+}
+
+.experience-image{
+height:450px
+}
+
+.form{
+grid-template-columns:1fr
+}
+
+.hero-content{
+margin-left:7%;
+margin-right:7%
+}
+
+.hero h1{
+font-size:60px
+}
+
+.scroll{
+left:7%
+}
+
+footer{
+flex-direction:column;
+gap:20px;
+text-align:center
+}
+
+}
